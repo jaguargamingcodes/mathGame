@@ -142,7 +142,7 @@ function exitQ() {
     hide("question");
     hide("exit")
     //
-    document.getElementById("bgmain1").style.display = "inline"
+    document.getElementById("bgmain1").style.display = "block"
     show("no2");
     show("welcomeSpace");
     document.getElementById("play").style.display = "inline"
