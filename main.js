@@ -6,6 +6,19 @@
        document.getElementById(id).style.display = 'block'
     }
 
+    function correct() {
+        document.getElementById("AwnserResp").style.color = "rgb(0,255,0)";
+        document.getElementById("AwnserResp").textContent = "✅ Correct!"
+        document.body.style.backgroundColor = "rgba(11, 90, 0, 1)"
+    }
+
+    function incorrect() {
+        document.getElementById("AwnserResp").style.color = "rgba(255, 0, 0, 1)";
+        document.getElementById("AwnserResp").textContent = "❌ Incorrect"
+        document.body.style.backgroundColor = "rgba(90, 0, 0, 1)"
+    }
+
+
 if (localStorage.getItem('username') === null || localStorage.getItem('username') === 'null') {
     let ask = window.prompt('Please Enter Your Username');
     if(ask.length > 15) {
@@ -96,40 +109,40 @@ function start() {
 
 function check1() {
     if(document.getElementById('op1').innerHTML == wrongAwnser1 || document.getElementById('op1').innerHTML == wrongAwnser2 || document.getElementById('op1').innerHTML == wrongAwnser3) {
-        alert("Incorrect");
+        incorrect()
         start()
     } else if(document.getElementById('op1').innerHTML == awnser) {
-        alert("Correct")
+        correct()
         start();
     }
 }
 
 function check2() {
     if(document.getElementById('op2').innerHTML == wrongAwnser1 || document.getElementById('op2').innerHTML == wrongAwnser2 || document.getElementById('op2').innerHTML == wrongAwnser3) {
-        alert("Incorrect");
+        incorrect()
         start()
     } else if(document.getElementById('op2').innerHTML == awnser) {
-        alert("Correct")
+        correct();
         start();
     }
 }
 
 function check3() {
     if(document.getElementById('op3').innerHTML == wrongAwnser1 || document.getElementById('op3').innerHTML == wrongAwnser2 || document.getElementById('op3').innerHTML == wrongAwnser3) {
-        alert("Incorrect");
+        incorrect()
         start()
     } else if(document.getElementById('op3').innerHTML == awnser) {
-        alert("Correct")
+        correct();
         start();
     }
 }
 
 function check4() {
     if(document.getElementById('op4').innerHTML == wrongAwnser1 || document.getElementById('op4').innerHTML == wrongAwnser2 || document.getElementById('op4').innerHTML == wrongAwnser3) {
-        alert("Incorrect");
+        incorrect()
         start()
     } else if(document.getElementById('op4').innerHTML == awnser) {
-        alert("Correct")
+        incorrect();
         start();
     }
 }

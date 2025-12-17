@@ -49,7 +49,7 @@ button.qButtons {
     font-size: 100px;
     font-family: system-ui;
     font-weight: 600;
-    
+    color: black;
 }
 
 #op1 {
@@ -57,7 +57,7 @@ button.qButtons {
 }
 
 #op2 {
-    background-image: linear-gradient(to right, yellow, green)
+    background-image: linear-gradient(to right, yellow, rgb(0, 163, 0))
 }
 
 #op3 {
