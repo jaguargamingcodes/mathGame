@@ -4,13 +4,13 @@ body {
     align-items: center;
     text-align: center;
     background-color: rgb(0, 0, 0);
-    color: whitesmoke;
+    color: rgb(46, 45, 45);
     font-family:monospace
 }
 
 #bgmain1 {
     background-image: url("https://i.pinimg.com/736x/e7/55/df/e755df7d91a88d1c8f1fd3fb4655ab2e.jpg");
-    height: 250px;
+    height: 350px;
     display: grid;
     place-items: center; 
     border-radius: 10px;

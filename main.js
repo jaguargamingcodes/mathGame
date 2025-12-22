@@ -142,7 +142,7 @@ function check4() {
         incorrect()
         start()
     } else if(document.getElementById('op4').innerHTML == awnser) {
-        incorrect();
+        correct();
         start();
     }
 }
