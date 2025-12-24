@@ -1,3 +1,9 @@
+    if(localStorage.getItem("POINTS") == "null" || localStorage.getItem("POINTS") == null) {
+        localStorage.setItem("POINTS",0)
+    }  
+    
+    setPointer = Number(localStorage.getItem("POINTS"));
+
     function hide(id) {
         document.getElementById(id).style.display = 'none'
     }
@@ -9,13 +15,20 @@
     function correct() {
         document.getElementById("AwnserResp").style.color = "rgb(0,255,0)";
         document.getElementById("AwnserResp").textContent = "✅ Correct!"
-        document.body.style.backgroundColor = "rgba(11, 90, 0, 1)"
+        document.body.style.backgroundColor = "rgba(11, 90, 0, 1)";
+        setPointer++;
+        if(Number(localStorage.getItem("POINTS") < setPointer)) {
+            localStorage.setItem("POINTS", setPointer)
+        }
+        document.getElementById("correctPoints").innerHTML = `Correct Points: ${Number(localStorage.getItem("POINTS") < setPointer)}`;
     }
 
     function incorrect() {
         document.getElementById("AwnserResp").style.color = "rgba(255, 0, 0, 1)";
         document.getElementById("AwnserResp").textContent = "❌ Incorrect"
         document.body.style.backgroundColor = "rgba(90, 0, 0, 1)"
+        setPointer--;
+        document.getElementById("correctPoints").innerHTML = `Correct Points: ${Number(localStorage.getItem("POINTS") < setPointer)}`;
     }
 
 
@@ -158,5 +171,25 @@ function exitQ() {
     document.getElementById("bgmain1").style.display = "block"
     show("no2");
     show("welcomeSpace");
-    document.getElementById("play").style.display = "inline"
+    document.getElementById("play").style.display = "inline";
+    document.body.style.backgroundColor = localStorage.getItem("Preferred-Background-Color");
+    document.getElementById("AwnserResp").style.display = "none"
 }
+
+console.log(setPointer)
+
+
+document.getElementById("correctPoints").innerHTML = `Correct Points: ${localStorage.getItem("POINTS")}`;
+
+function showConfigs() {
+    show("color")
+    document.getElementById("chooser").style.display = "inline"
+}
+
+function chooseBgColor() {
+    let choose = window.prompt("Choose Background Color")
+    document.body.style.backgroundColor = choose;
+    localStorage.setItem("Preferred-Background-Color",choose)
+}
+
+document.body.style.backgroundColor = localStorage.getItem("Preferred-Background-Color")

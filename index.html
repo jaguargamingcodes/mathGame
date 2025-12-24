@@ -14,13 +14,25 @@
     </div>
     <div class="aH" style="height: 80px; width: 920px; font-size: 30px; color: whitesmoke" id="welcomeSpace"></div>
     <button clas="aH" id="play" onclick="start()">Play</button>
-    <h1 style="font-size: 200px; color: greenyellow" id="question" class="inv" class="qButtons"></h1>
+    <h1 style="font-size: 200px; color: rgb(255, 255, 255)" id="question" class="inv" class="qButtons"></h1>
     <div><h1 id="AwnserResp"></h1></div>
     <span><button id="op1" class="qButtons" onclick="check1()"></button></span>
     <button id="op2" class="qButtons" onclick="check2()"></button>
     <br>
     <button id="op3" class="qButtons" onclick="check3()"></button>
     <button id="op4" class="qButtons" onclick="check4()"></button>
+    <br>
+    <span id="correctPoints" style="color: whitesmoke; font-size: 30px;"></span>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <button id="settings" onclick="showConfigs();">Settings</button>
+    <br><span style="display: none;" id="color" onclick="showbgchooser();">Background Color:</span>
+    <button id="chooser" onclick="chooseBgColor()" style="display: none;">choose</button>
     <script src="./main.js"></script>
   </body> 
 </html>
