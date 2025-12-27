@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <button class="inv" id="exit" onclick="exitQ();">back</button>
+    <button class="inv" id="exit" onclick="exitQ();" style="background-color: aquamarine; font-family: cursive; border-radius: 5px; align-self: auto; justify-self: left;">back</button>
     <div id="bgmain1" class="aH">
-      <span style="font-size: 150px; color: whitesmoke; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; align-self: center;" class="aH" id="no2">Math Game</span>
+      <span style="font-size: 150px; color: whitesmoke; align-self: center;" class="aH" id="no2">MATH GAME</span>
     </div>
     <div class="aH" style="height: 80px; width: 920px; font-size: 30px; color: whitesmoke" id="welcomeSpace"></div>
-    <button clas="aH" id="play" onclick="start()">Play</button>
+    <button clas="aH" id="play" onclick="start()">PLAY</button>
     <h1 style="font-size: 200px; color: rgb(255, 255, 255)" id="question" class="inv" class="qButtons"></h1>
     <div><h1 id="AwnserResp"></h1></div>
     <span><button id="op1" class="qButtons" onclick="check1()"></button></span>
@@ -31,8 +31,11 @@
     <br>
     <br>
     <button id="settings" onclick="showConfigs();">Settings</button>
-    <br><span style="display: none;" id="color" onclick="showbgchooser();">Background Color:</span>
+    <button id="hideSettings" onclick="hideSettings();" style="display: none;">HIDE</button>
+    <span style="display: none;" id="color" onclick="showbgchooser();">Background Color:</span>
     <button id="chooser" onclick="chooseBgColor()" style="display: none;">choose</button>
+    <span style="display:none" id="usc">reset username and cookies:</span>
+    <button style="display: none;" id="clear" onclick="if(confirm('Are you sure you want to reset your username?')) {localStorage.removeItem('username')} else {}">CLEAR</button>
     <script src="./main.js"></script>
   </body> 
 </html>

@@ -52,7 +52,7 @@ if (localStorage.getItem('username') === null || localStorage.getItem('username'
 }
 
 if(localStorage.getItem('username') !== null || localStorage.getItem('username') !== "null") {
-    document.getElementById('welcomeSpace').innerHTML = `Welcome ${localStorage.getItem('username')}!` + "<br>" + "Have Good Luck!"
+    document.getElementById('welcomeSpace').innerHTML = `Welcome ${localStorage.getItem('username')}!` + "<br>" + "Good Luck!"
 }
 
 
@@ -183,13 +183,25 @@ document.getElementById("correctPoints").innerHTML = `Correct Points: ${localSto
 
 function showConfigs() {
     show("color")
-    document.getElementById("chooser").style.display = "inline"
+    show("chooser")
+    show("usc")
+    show("clear")
+    show("hideSettings")
 }
 
 function chooseBgColor() {
     let choose = window.prompt("Choose Background Color")
     document.body.style.backgroundColor = choose;
     localStorage.setItem("Preferred-Background-Color",choose)
+    document.getElementById("chooser").innerHTML = document.body.style.backgroundColor;
 }
 
 document.body.style.backgroundColor = localStorage.getItem("Preferred-Background-Color")
+
+function hideSettings() {
+    hide("color")
+    hide("chooser")
+    hide("usc")
+    hide("clear")
+    hide("hideSettings")
+}

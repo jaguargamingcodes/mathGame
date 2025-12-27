@@ -68,3 +68,6 @@ button.qButtons {
     background-image: linear-gradient(to right,rgb(0, 149, 255), rgb(140, 0, 255))
 }
 
+button {
+    cursor: pointer;
+}
