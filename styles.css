@@ -1,3 +1,4 @@
+
 body {
     align-self: center;
     align-content: center;
@@ -5,7 +6,6 @@ body {
     text-align: center;
     background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
-    font-family:monospace
 }
 
 #bgmain1 {
@@ -18,7 +18,11 @@ body {
     border-color: aquamarine;
     border-style: solid;
     font-weight: 700;
-    text-shadow: 5px 5px red;
+    text-shadow: 
+    2px 2px 0 #ff559c, 
+    -2px -2px 0 #00aeff; 
+    font-family: 'Rubik Glitch';
+    font-weight:100;
 }
 
 .inv {
@@ -26,18 +30,19 @@ body {
 }
 
 #play {
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     font-size: 100px;
     width: 450px;
     height: 150px;
-    background-image: url('https://images.ctfassets.net/nnkxuzam4k38/39sOStld2OCyNn3HmCpqco/21d339122a7cb417c83e6ebdc347ea5c/sea-edge-79ab30e2.png');
     cursor: pointer;
     border-radius: 20px;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    background-color: transparent;
+    border: 10px solid rgb(0, 255, 0);
 }
 
 #welcomeSpace {
     text-align: center;
+    font-family: "Permanent Marker"
 }
 
 button.qButtons {
@@ -70,4 +75,14 @@ button.qButtons {
 
 button {
     cursor: pointer;
+    background-color: transparent;
+    border-radius: 15px;
+    border: solid rgb(67, 166, 247);
+    color: white;
+    font-family: "audiowide";
+}
+
+
+#correctPoints {
+    font-family: "Permanent Marker"
 }
